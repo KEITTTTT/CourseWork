@@ -42,7 +42,7 @@ public class Main {
     }
 
     public static Employee getEmployeeWithMaxSalary() {
-        int max = Integer.MIN_VALUE;
+        int max = 80000;
         Employee targetEmployee = null;
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() > max) {
@@ -55,7 +55,7 @@ public class Main {
 
 
     public static Employee getEmployeeWithMinSalary() {
-        int min = Integer.MAX_VALUE;
+        int min = 80000;
         Employee target = null;
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < min) {
@@ -69,10 +69,7 @@ public class Main {
 
     public static int getEmployeeAverageSalary() {
         int average = 0;
-        for (Employee employee : employees) {
-            if (employee != null)
-                average = calculateSumSalary() / 10;
-        }
+        average = calculateSumSalary() / employees.length;
         return average;
     }
 
